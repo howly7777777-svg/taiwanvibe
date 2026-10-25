@@ -1,1 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Come Taiwan — The Privacy-First Offline Taiwan Travel Companion</title>
+  <meta name="description" content="100% offline, privacy-first Taiwan travel guide. Decode night markets, customize bubble tea orders, navigate MRT, and explore cultural rituals with zero cloud tracking.">
+  <meta property="og:title" content="Come Taiwan — The Privacy-First Taiwan Travel Companion">
+  <meta property="og:description" content="100% Offline, Zero Tracking, Bubble Tea Master, and Authentic Taiwan Cultural Guide.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://howly7777777-svg.github.io/taiwanvibe/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇹🇼</text></svg>">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #111827;
+      --card-border: #1f2937;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --primary: #f59e0b;
+      --primary-hover: #d97706;
+      --accent-blue: #38bdf8;
+      --accent-red: #ef4444;
+      --accent-green: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 0 20px 80px;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    header {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p.hero-sub {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 36px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+      color: #000000;
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(245, 158, 11, 0.4);
+    }
+    .btn-secondary {
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+    }
+    .btn-secondary:hover {
+      background: #1f2937;
+    }
+    .languages-bar {
+      margin: 40px auto;
+      padding: 16px 20px;
+      background: rgba(17, 24, 39, 0.8);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+    .languages-bar span {
+      margin: 0 8px;
+      display: inline-block;
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 60px 0;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 30px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+    .card-icon {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      text-align: center;
+      margin: 80px 0 20px;
+    }
+    .section-sub {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      font-size: 1rem;
+    }
+    .faq {
+      margin: 40px 0;
+    }
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .faq-item h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+    .faq-item p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .support-box {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+      margin: 60px 0;
+    }
+    .support-box h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+    .support-box p {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .email-link {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.15rem;
+      background: rgba(245, 158, 11, 0.1);
+      padding: 10px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      display: inline-block;
+      transition: all 0.2s ease;
+    }
+    .email-link:hover {
+      background: rgba(245, 158, 11, 0.2);
+    }
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding-top: 40px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: var(--text-muted);
+      text-decoration: underline;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">
+        <span>🛡️ 100% OFFLINE</span> • <span>🔒 ZERO CLOUD TRACKING</span>
+      </div>
+      <h1>Come Taiwan</h1>
+      <p class="hero-sub">
+        The ultimate cultural companion for exploring Taiwan. Decipher night market menus, order bubble tea like a local, calculate currency offline, and experience folk rituals with complete privacy.
+      </p>
+      <div class="btn-group">
+        <a href="https://apps.apple.com/app/come-taiwan/id6744706631" class="btn btn-primary" target="_blank" rel="noopener">
+          <span> Download on App Store</span>
+        </a>
+        <a href="#support" class="btn btn-secondary">
+          <span>✉️ Contact Support</span>
+        </a>
+      </div>
+    </header>
 
+    <div class="languages-bar">
+      🌍 <strong>Available in 11 Languages:</strong><br>
+      <span>🇺🇸 English</span> • <span>🇹🇼 繁體中文</span> • <span>🇨🇳 简体中文</span> • <span>🇯🇵 日本語</span> • <span>🇰🇷 한국어</span> • <span>🇹🇭 ไทย</span> • <span>🇻🇳 Tiếng Việt</span> • <span>🇩🇪 Deutsch</span> • <span>🇫🇷 Français</span> • <span>🇪🇸 Español</span> • <span>🇧🇷 Português</span>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🧋</div>
+        <h3>Boba Order Master</h3>
+        <p>Pick sweetness (0% to 100%) and ice levels. Instantly generate a Traditional Chinese card with authentic Mandarin audio pronunciation to show vendors.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <h3>100% On-Device AI</h3>
+        <p>No API key required, zero server telemetry, and no roaming data consumed. Local neural engine answers transit, food etiquette, and emergency queries on the fly.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⛩️</div>
+        <h3>Temple & 3D Bwa Bwei</h3>
+        <p>Authentic 8-step temple worship guide. Toss digital wooden moon blocks with physical resonance and consult 28 Classical Chinese fortune poems.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💱</div>
+        <h3>Instant Offline Currency</h3>
+        <p>Convert Taiwan Dollars (TWD) into USD, EUR, JPY, GBP, and 4 other currencies offline with street food price benchmarks.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚇</div>
+        <h3>Offline Transit Maps</h3>
+        <p>Interactive route maps for Taipei MRT, Kaohsiung MRT, Light Rail, and High-Speed Rail. Fully functional deep underground with zero signal.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚨</div>
+        <h3>Night Market Allergy Flash</h3>
+        <p>Instantly alert vendors with high-contrast Chinese flashcards: "No Cilantro", "Strict Vegetarian", and "Peanut Allergy" to prevent cross-contamination.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Everything you need to know about Come Taiwan</p>
+
+    <div class="faq">
+      <div class="faq-item">
+        <h4>Does Come Taiwan work completely offline?</h4>
+        <p>Yes! All core guides, subway maps, local neural AI answers, currency calculations, and audio pronunciation cards work 100% offline without cellular roaming or Wi-Fi.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do I need to create an account or provide personal data?</h4>
+        <p>No. You can use the app immediately after download without any registration. We do not track your location history or sell your personal data.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do I restore my purchases on a new iPhone?</h4>
+        <p>Open the app, tap the ⚙️ Settings icon in the top right corner, and select "Restore Purchases (恢復購買)". Your PRO privileges will be restored automatically via Apple StoreKit.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do I change the display language?</h4>
+        <p>Tap the Language Selector at the top right of any screen or go to Settings to switch between all 11 supported languages anytime.</p>
+      </div>
+    </div>
+
+    <div class="support-box" id="support">
+      <h3>Need Help or Found a Bug?</h3>
+      <p>We are dedicated to providing the best travel experience in Taiwan. Reach out to our developer support team directly:</p>
+      <a href="mailto:howly7777777@gmail.com?subject=[Come%20Taiwan%20Support]%20User%20Inquiry" class="email-link">
+        ✉️ howly7777777@gmail.com
+      </a>
+      <p style="margin-top: 16px; font-size: 0.85rem; color: #94a3b8;">
+        Average response time: within 24 hours.
+      </p>
+    </div>
+
+    <footer>
+      <p>© 2026 Come Taiwan. All rights reserved.</p>
+      <p style="margin-top: 10px;">
+        <a href="privacy.html">Privacy Policy (隱私權政策)</a> | 
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Terms of Use (EULA)</a> |
+        <a href="mailto:howly7777777@gmail.com">Support (技術支援)</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
